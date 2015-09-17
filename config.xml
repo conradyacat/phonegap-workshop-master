@@ -14,7 +14,7 @@
     <author href="http://coenraets.org" email="ccoenraets@gmail.com">
         Christophe Coenraets
     </author>
-
+<!--
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
     <feature name="http://api.phonegap.com/1.0/file"/>
@@ -22,5 +22,10 @@
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
+-->
+    <!-- Core plugins -->
+    <gap:plugin name="org.apache.cordova.camera"/>
+    <gap:plugin name="org.apache.cordova.contacts"/>
+    <gap:plugin name="org.apache.cordova.geolocation"/>
 
 </widget>

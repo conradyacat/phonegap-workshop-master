@@ -1,8 +1,4 @@
 var HomeView = function(store) {
-  this.initialize = function(){
-    this.el = $('<div/>');
-    this.el.on('keyup', '.search-key', this.findByName);
-  };
 
   this.render = function() {
     this.el.html(HomeView.template());
@@ -14,6 +10,11 @@ var HomeView = function(store) {
       $('.employee-list').html(HomeView.liTemplate(employees));
     });
   };
+
+  this.initialize = function(){
+    this.el = $('<div/>');
+    this.el.on('keyup', '.search-key', this.findByName);
+  };  
 
   this.initialize();
 };

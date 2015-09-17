@@ -1,11 +1,4 @@
 var EmployeeView = function(employee) {
-  this.initialize = function() {
-    var self = this;
-    this.el = $('<div/>');
-    this.el.on('click', '.add-location-btn', function() { self.addLocation(event); });
-    this.el.on('click', '.add-contact-btn',  function() { self.addToContacts(event); });
-    this.el.on('click', '.change-pic-btn',  function() { self.changePicture(event); });
-  };
 
   this.render = function() {
     this.el.html(EmployeeView.template(employee));
@@ -68,6 +61,14 @@ var EmployeeView = function(employee) {
       options
     );
     return false;
+  };
+
+  this.initialize = function() {
+    var self = this;
+    this.el = $('<div/>');
+    this.el.on('click', '.add-location-btn', this.addLocation);
+    this.el.on('click', '.add-contact-btn',  this.addToContacts);
+    this.el.on('click', '.change-pic-btn',  this.changePicture);
   };
 
   this.initialize();
